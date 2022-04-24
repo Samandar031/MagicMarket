@@ -1,6 +1,8 @@
+const { create } = require("domain");
 const fs = require("fs");
 const http = require("http");
 const url = require("url");
+const replaceFunc = require("./module/replaceFunc.js");
 
 // let login = document.querySelector(".login_btn_l");
 // let create = document.querySelector(".sign_btn_s");
@@ -67,4 +69,28 @@ const url = require("url");
 let css = fs.readFileSync("./dist/index.b10d73a7.css", "utf-8");
 let html = fs.readFileSync("./index.html", "utf-8");
 
+let cardHtml = fs.readFileSync("./templates/card.html", "utf-8");
+
 const dataD = fs.readFileSync("./dev-data/data.json", "utf-8");
+const dataObj = JSON.parse(dataD);
+// console.log(dataObj);
+
+const server = http.createServer((req, res) => {
+  const changeCard = dataObj
+    .map((val) => {
+      return replaceFunc(cardHtml, val);
+    })
+    .join("");
+
+  let urlcha = req.url;
+  let output = html.replace("{cardHtml}", changeCard);
+
+  if (urlcha == "/overview") {
+    res.writeHead(200, {
+      "content-type": "text.html",
+      "mening-headrim": "muvaffaqqiyatli ishlamoqda",
+    });
+    res.end(output);
+  }
+});
+server.listen("8001", "127.0.0.1");
