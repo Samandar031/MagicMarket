@@ -160,5 +160,76 @@ html{
      
     }
   }
+}
 
+.register {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--toqKok);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .register_cards{
+    padding: 4rem 0  2rem 0; 
+    overflow: hidden;
+    width: 50rem;
+    height: 35rem;
+    background-color: white;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    .register_login{
+      transform: translateY(30rem);
+      transition: all 2s;
+      input{
+        width: 80%;
+        padding: 1rem;
+        border: none;
+        background-color: #97d7ed54;
+        margin: 1.5rem;
+        outline: none;
+        font-size: 1.2rem;
+      }
+      .login_btn{
+        width: 80%;
+        margin: 5rem auto 2rem;
+        padding: 1rem;
+        
+        background-color: #97d8ed;
+        
+      }
+      .login_description{
+        .login_btn_l{
+          cursor: pointer;
+        }
+      }
+    }
+
+    .register_sign{
+      // display: none;
+      transform: translateY(-26rem);
+      transition: all 2s;
+      input{
+        width: 80%;
+        padding: 1rem;
+        border: none;
+        background-color: #97d7ed54;
+        margin: 1rem;
+        outline: none;
+      }
+      .sign_btn{
+        width: 80%;
+        padding: 1rem;
+        border: none;
+        background-color: #97d8ed;
+        margin: 1.5rem auto;
+      
+      }
+      .sign_description{
+        .sign_btn_s{
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
