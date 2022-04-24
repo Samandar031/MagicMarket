@@ -143,16 +143,19 @@ html {
   width: 100%;
   height: 100vh;
   z-index: 100;
-  background-color: #000c;
+ 
   transition: all 2s;
-  display: none;
+  margin-top: 5rem;
   position: fixed;
-  top: 0;
+  
 }
 
 .popup .popup_cards {
+  margin-top: 15rem;
+  border: 1px solid var(--ortacha);
+  border-left: 1rem solid var(--kok);
   width: 80%;
-  height: 90%;
+  height: 85%;
   background-color: #fff;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 2rem auto;
@@ -169,8 +172,9 @@ html {
   text-align: end;
   grid-column: 1 / 3 span;
   position: fixed;
-  top: 4rem;
-  right: 16rem;
+  top: 9rem;
+  right: 18rem;
+  font-size: 3rem;
 }
 
 .popup .popup_cards .popup_basic_card {
@@ -320,7 +324,7 @@ html {
   cursor: pointer;
 }
 
-/*# sourceMappingURL=index.b10d73a7.css.map */
+
 
   </style>
 </head>
@@ -342,17 +346,6 @@ html {
       </div>
     </section>
 
-    <section class="basic_content">
-
-      <div class="basic_cards">
-        {cardHtml}
-        {cardHtml}
-        {cardHtml}
-        {cardHtml}
-      </div>
-
-    </section>
-
     <section class="popup">
       <div class="popup_cards">
 
@@ -364,7 +357,7 @@ html {
         
 
         <div class="popup_basic_card">
-          <img src="#" alt="">
+          <img src="{ImageProduct}" alt="">
           <div class="popup_basic_content">
             <div class="popup_basic_title">{NameProduct}</div>
             <div class="popup_basic_description">
@@ -379,35 +372,10 @@ html {
       </div>
     </section>
 
-   
-    <section class="register">
-      <div class="register_close"><i class="bi bi-x-square"></i></div>
-
-      <div class="register_cards">
-        <div class="register_login">
-          <input type="text" id="username"class="username"placeholder="username"><br>
-          <input type="password" id="pasword" class="pasword" placeholder="parol">
-          <div class="login_btn">LOGIN</div>
-          <p class="login_description">
-            Not registered? <span class="login_btn_l">Create an account</span>
-          </p>
-        </div>
-
-        <div class="register_sign">
-          <input type="text" id="name" class="name" placeholder="name"><br>
-          <input type="password" id="sign_pasword" class="sign_pasword" placeholder="password"><br>
-          <input type="email" id="email" class="email" placeholder="email address">
-          <div class="sign_btn">CREATE</div>
-          <p class="sign_description">
-            Already registered? <span class="sign_btn_s">Sign In</span>
-          </p>
-        </div>
-      </div>
-    </section>
 
   </div>
 
-  <!-- <script type="module" src="controller.js"></script> -->
+  <script type="module" src="controller.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

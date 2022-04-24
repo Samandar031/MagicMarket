@@ -71,6 +71,8 @@ let html = fs.readFileSync("./index.html", "utf-8");
 
 let cardHtml = fs.readFileSync("./templates/card.html", "utf-8");
 
+let popup = fs.readFileSync("./templates/popup.html", "utf-8");
+
 const dataD = fs.readFileSync("./dev-data/data.json", "utf-8");
 const dataObj = JSON.parse(dataD);
 // console.log(dataObj);
@@ -83,6 +85,8 @@ const server = http.createServer((req, res) => {
     .join("");
 
   let urlcha = req.url;
+  let query = +url.parse(urlcha, true).query.id;
+
   let output = html.replace("{cardHtml}", changeCard);
 
   if (urlcha == "/overview") {
@@ -91,6 +95,14 @@ const server = http.createServer((req, res) => {
       "mening-headrim": "muvaffaqqiyatli ishlamoqda",
     });
     res.end(output);
+  } else if (urlcha == `/product?id=${query}`) {
+    let objs = dataObj.find((val) => val.id == query);
+
+    let popupHtml = replaceFunc(popup, objs);
+    res.writeHead(200, {
+      "content-type": "text/html",
+    });
+    res.end(popupHtml);
   }
 });
 server.listen("8001", "127.0.0.1");

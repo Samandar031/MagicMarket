@@ -1,5 +1,5 @@
 const repleceFunc = function (html, obj) {
-  let out = html.replace(/{ImageProduct}/g, obj.image);
+  let out = html.replace("{ImageProduct}", obj.image);
   out = out.replace("{NameProduct}", obj.productName);
   out = out.replace("{DetailProduct}", obj.quantity);
   out = out.replace("{PriceProduct}", obj.price);
