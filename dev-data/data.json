@@ -1,0 +1,123 @@
+
+[
+  {
+    "image": "🥑",
+    "id": 0,
+    "productName": "Fresh Avocados",
+    "price": "6.50",
+    "buyed": "5",
+    "category": "fruit",
+    "reyting": "⭐️⭐️",
+    "description": "The fruit of domestic varieties has a buttery flesh when ripe. Depending on the variety, avocados have green, brown, purplish, or black skin when ripe, and may be pear-shaped, egg-shaped, or spherical. Commercially, the fruits are picked while immature, and ripened after harvesting."
+  },
+  {
+    "image": "🍌",
+    "id": 1,
+    "productName": "Banana",
+    "price": "10.50",
+    "buyed": "5",
+    "category": "fruit",
+    "reyting": "⭐️⭐️⭐️",
+    "description": "A banana is an elongated, edible fruit – botanically a berry[1][2] – produced by several kinds of large herbaceous flowering plants in the genus Musa.[3] In some countries, bananas used for cooking may be called plantains, distinguishing them from dessert bananas."
+  },
+  {
+    "image": "🍎",
+    "id": 2,
+    "productName": "Apple",
+    "price": "4.50",
+    "buyed": "15",
+    "category": "fruit",
+    "reyting": "⭐️⭐️⭐️⭐️",
+    "description": "An apple is an edible fruit produced by an apple tree (Malus domestica). Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus."
+  },
+  {
+    "image": "🍐",
+    "id": 3,
+    "productName": "Pear",
+    "price": "1.50",
+    "buyed": "35",
+    "category": "fruit",
+    "reyting": "⭐️⭐️",
+    "description": "Pears are fruits produced and consumed around the world, growing on a tree and harvested in the Northern Hemisphere in late summer into October. "
+  },
+  {
+    "image": "🥬️",
+    "id": 4,
+    "productName": "Leafy green",
+    "price": "7.50",
+    "buyed": "23",
+    "category": "vegatable",
+    "reyting": "⭐️⭐️⭐️",
+    "description": "Leaf vegetables contain many typical plant nutrients, but since they are photosynthetic tissues, their vitamin K levels are particularly notable. Phylloquinone, the most common form of the vitamin, is directly involved in photosynthesis."
+  },
+  {
+    "id": 5,
+    "productName": "Apollo Broccoli",
+    "image": "🥦",
+    "price": "5.50",
+    "buyed": "23",
+    "category": "vegatable",
+    "reyting": "⭐️⭐️⭐️⭐️",
+    "description": "Broccoli (Brassica oleracea var. italica) is an edible green plant in the cabbage family (family Brassicaceae, genus Brassica) whose large flowering head, stalk and small associated leaves are eaten as a vegetable."
+  },
+  {
+    "id": 6,
+    "productName": "Carrot",
+    "image": "🥕",
+    "price": "2.50",
+    "buyed": "53",
+    "category": "vegatable",
+    "reyting": "⭐️⭐️⭐️⭐️",
+    "description": "The carrot is a biennial plant in the umbellifer family, Apiaceae. At first, it grows a rosette of leaves while building up the enlarged taproot."
+  },
+  {
+    "id": 7,
+    "productName": "Tomato",
+    "image": "🍅",
+    "price": "23.50",
+    "buyed": "13",
+    "category": "vegatable",
+    "reyting": "⭐️⭐️⭐️",
+    "description": "The tomato is the edible berry of the plant Solanum lycopersicum,[1][2] commonly known as the tomato plant. "
+  },
+  {
+    "id": 8,
+    "productName": "Alpen Gold",
+    "image": "🍫",
+    "price": "5.50",
+    "buyed": "43",
+    "category": "chocolate",
+    "reyting": "⭐️⭐️⭐️⭐️",
+    "description": "Chocolate is a food product made from roasted and ground cacao pods, that is available as a liquid, solid or paste, on its own or as a flavoring agent in other foods"
+  },
+  {
+    "id": 9,
+    "productName": "Estello",
+    "image": "🍬",
+    "price": "2.50",
+    "buyed": "453",
+    "category": "chocolate",
+    "reyting": "⭐️⭐️⭐️⭐️",
+    "description": "Candy, also called sweets (British English) or lollies (Australian English, New Zealand English),[a] is a confection that features sugar as a principal ingredient."
+  },
+  {
+    "id": 10,
+    "productName": "Lollipop",
+    "image": "🍭",
+    "price": "23.50",
+    "buyed": "183",
+    "category": "chocolate",
+    "reyting": "⭐️⭐️⭐️",
+    "description": "Lollipops are available in a number of colors and flavors, particularly fruit flavors. With numerous companies producing lollipops, the candy now comes in dozens of flavors and many different shapes."
+  },
+  {
+    "id": 11,
+    "productName": "Ice Cream",
+    "image": "🍨",
+    "price": "23.50",
+    "buyed": "283",
+    "category": "chocolate",
+    "reyting": "⭐️⭐️",
+    "description": "Ice cream is a sweetened frozen food typically eaten as a snack or dessert. It may be made from milk or cream and is flavoured with a sweetener, either sugar or an alternative, and a spice, such as cocoa or vanilla, or with fruit such as strawberries or peaches."
+  }
+]

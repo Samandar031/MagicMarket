@@ -5,9 +5,317 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./src/scss/main.scss">
+  <!-- <link rel="stylesheet" href="./src/scss/main.scss"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <style>
+    @import "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap";
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --toqKok: #52aabc;
+  --kok: #97d8ed;
+  --och: #f0e593;
+  --ortacha: #f8bc43;
+  --jigarrang: #a6620a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Quicksand, sans-serif;
+  text-decoration: none;
+}
+
+.containerS {
+  margin: 0 auto;
+}
+
+.navbar {
+  width: 100%;
+  height: 5rem;
+  background-color: var(--kok);
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  font-size: 2rem;
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+
+.navbar .nav_right {
+  place-items: center;
+  gap: 2rem;
+  font-size: 1.6rem;
+  display: flex;
+}
+
+.navbar .nav_right .nav_sign {
+  color: var(--kok);
+  background-color: #fff;
+  border-radius: .4rem;
+  padding: .4rem .8rem;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Quicksand, sans-serif;
+  text-decoration: none;
+}
+
+:root {
+  --toqKok: #52aabc;
+  --kok: #97d8ed;
+  --och: #f0e593;
+  --ortacha: #f8bc43;
+  --jigarrang: #a6620a;
+}
+
+.containerS {
+  height: 100%;
+  margin: 0 auto;
+}
+
+.basic_content {
+  width: 134rem;
+  margin: 10rem auto 5rem;
+}
+
+.basic_cards {
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5rem;
+  display: grid;
+}
+
+.basic_cards .basic_card {
+  width: 25rem;
+  height: 35rem;
+  border-radius: .4rem;
+  margin: 1rem auto;
+  box-shadow: 0 0 .5rem gray;
+}
+
+.basic_cards .basic_card img {
+  width: 100%;
+  height: 50%;
+  margin-bottom: 3rem;
+}
+
+.basic_cards .basic_card .card_description, .basic_cards .basic_card .card_footer {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  display: flex;
+}
+
+.basic_cards .basic_card .card_plus {
+  font-size: 3rem;
+}
+
+.basic_cards .basic_card .card_btn {
+  border: 1px solid var(--toqKok);
+  border-radius: 2rem;
+  padding: .8rem;
+}
+
+.popup {
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background-color: #000c;
+  transition: all 2s;
+  display: none;
+  position: fixed;
+  top: 0;
+}
+
+.popup .popup_cards {
+  width: 80%;
+  height: 90%;
+  background-color: #fff;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 2rem auto;
+  padding: 2rem;
+  display: grid;
+  overflow: auto;
+}
+
+.popup .popup_cards::-webkit-scrollbar {
+  width: 12px;
+}
+
+.popup .popup_cards .popup_close {
+  text-align: end;
+  grid-column: 1 / 3 span;
+  position: fixed;
+  top: 4rem;
+  right: 16rem;
+}
+
+.popup .popup_cards .popup_basic_card {
+  grid-column: 1 / 3 span;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+  display: flex;
+}
+
+.popup .popup_cards .popup_basic_card img {
+  width: 20rem;
+  height: 35rem;
+  border: 2px solid red;
+}
+
+.popup .popup_cards .popup_basic_card .popup_basic_content {
+  height: 35rem;
+  padding: 2rem;
+}
+
+.popup .popup_cards .popup_basic_card .popup_basic_content .popup_basic_title {
+  text-align: center;
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.popup .popup_cards .popup_basic_card .popup_basic_content .popup_basic_description {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.popup .popup_cards .popup_basic_card .popup_basic_content .popup_basic_add {
+  border: 2px solid var(--toqKok);
+  width: 15rem;
+  text-align: center;
+  border-radius: 2rem;
+  margin: 5rem 0 0 65rem;
+  padding: .5rem;
+  font-size: 1.5rem;
+}
+
+.popup .popup_cards .basic_card {
+  box-shadow: 0 0 .8rem var(--kok);
+  width: 25rem;
+  height: 25rem;
+  border-radius: .4rem;
+  margin: 1rem auto;
+}
+
+.popup .popup_cards .basic_card img {
+  width: 100%;
+  height: 50%;
+  margin-bottom: 2rem;
+}
+
+.popup .popup_cards .basic_card .card_description, .popup .popup_cards .basic_card .card_footer {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  display: flex;
+}
+
+.popup .popup_cards .basic_card .card_btn {
+  border: 1px solid var(--toqKok);
+  border-radius: 2rem;
+  padding: .8rem;
+}
+
+.register {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--toqKok);
+  display: none;
+  position: fixed;
+  top: 0;
+}
+
+.register .register_close {
+  text-align: end;
+  color: #fff;
+  padding: 2rem 4rem;
+  font-size: 3rem;
+}
+
+.register .register_cards {
+  width: 50rem;
+  height: 35rem;
+  text-align: center;
+  background-color: #fff;
+  flex-direction: column;
+  margin: 5rem auto;
+  padding: 4rem 0 2rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.register .register_cards .register_login {
+  transition: all 2s;
+  transform: translateY(30rem);
+}
+
+.register .register_cards .register_login input {
+  width: 80%;
+  background-color: #97d7ed54;
+  border: none;
+  outline: none;
+  margin: 1.5rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.register .register_cards .register_login .login_btn {
+  width: 80%;
+  background-color: #97d8ed;
+  margin: 5rem auto 2rem;
+  padding: 1rem;
+}
+
+.register .register_cards .register_login .login_description .login_btn_l {
+  cursor: pointer;
+}
+
+.register .register_cards .register_sign {
+  transition: all 2s;
+  transform: translateY(-26rem);
+}
+
+.register .register_cards .register_sign input {
+  width: 80%;
+  background-color: #97d7ed54;
+  border: none;
+  outline: none;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.register .register_cards .register_sign .sign_btn {
+  width: 80%;
+  background-color: #97d8ed;
+  border: none;
+  margin: 1.5rem auto;
+  padding: 1rem;
+}
+
+.register .register_cards .register_sign .sign_description .sign_btn_s {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.b10d73a7.css.map */
+
+  </style>
 </head>
 <body>
 
@@ -30,66 +338,7 @@
     <section class="basic_content">
 
       <div class="basic_cards">
-        <div class="basic_card">
-          <img src="#" alt="">
-          <div class="card_description">
-            <div class="card_name">limon</div>
-            <div class="card_plus">+</div>
-          </div>
-          <div class="card_footer">
-            <div class="card_price">35 $</div>
-            <div class="card_btn">show more</div>
-          </div>
-        </div>
-
-        <div class="basic_card">
-          <img src="#" alt="">
-          <div class="card_description">
-            <div class="card_name">limon</div>
-            <div class="card_plus">+</div>
-          </div>
-          <div class="card_footer">
-            <div class="card_price">35 $</div>
-            <div class="card_btn">show more</div>
-          </div>
-        </div>
-
-        <div class="basic_card">
-          <img src="#" alt="">
-          <div class="card_description">
-            <div class="card_name">olma</div>
-            <div class="card_plus">+</div>
-          </div>
-          <div class="card_footer">
-            <div class="card_price">35 $</div>
-            <div class="card_btn">show more</div>
-          </div>
-        </div>
-
-        <div class="basic_card">
-          <img src="#" alt="">
-          <div class="card_description">
-            <div class="card_name">olma</div>
-            <div class="card_plus">+</div>
-          </div>
-          <div class="card_footer">
-            <div class="card_price">35 $</div>
-            <div class="card_btn">show more</div>
-          </div>
-        </div>
-
-        <div class="basic_card">
-          <img src="#" alt="">
-          <div class="card_description">
-            <div class="card_name">olma</div>
-            <div class="card_plus">+</div>
-          </div>
-          <div class="card_footer">
-            <div class="card_price">35 $</div>
-            <div class="card_btn">show more</div>
-          </div>
-        </div>
-      
+        {cardHtml}
       </div>
 
     </section>
@@ -111,42 +360,7 @@
           </div>
         </div>
 
-        <div class="basic_card">
-          <img src="#" alt="">
-          <div class="card_description">
-            <div class="card_name">olma</div>
-            <div class="card_plus">+</div>
-          </div>
-          <div class="card_footer">
-            <div class="card_price">35 $</div>
-            <div class="card_btn">show more</div>
-          </div>
-        </div>
-
-        <div class="basic_card">
-          <img src="#" alt="">
-          <div class="card_description">
-            <div class="card_name">olma</div>
-            <div class="card_plus">+</div>
-          </div>
-          <div class="card_footer">
-            <div class="card_price">35 $</div>
-            <div class="card_btn">show more</div>
-          </div>
-        </div>
-
-        <div class="basic_card">
-          <img src="#" alt="">
-          <div class="card_description">
-            <div class="card_name">olma</div>
-            <div class="card_plus">+</div>
-          </div>
-          <div class="card_footer">
-            <div class="card_price">35 $</div>
-            <div class="card_btn">show more</div>
-          </div>
-        </div>
-
+        {cardHtml}{cardHtml}{cardHtml}
 
       </div>
     </section>
@@ -178,7 +392,6 @@
 
   </div>
 
-  <script src="./src/js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script type="module" src="controller.js"></script>
 </body>
 </html>
