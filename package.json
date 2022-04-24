@@ -8,8 +8,7 @@
     "parcel": "^2.5.0"
   },
   "scripts": {
-    "start": "parcel index.html",
-    "dev": "nodemon src/js/script.js"
+    "start": "parcel index.html"
   },
   "repository": {
     "type": "git",
@@ -22,6 +21,7 @@
   },
   "homepage": "https://github.com/samandarqodirqulov/MagicMarket#readme",
   "dependencies": {
+    "bootstrap": "^5.0.1",
     "nodemon": "^2.0.15",
     "slugify": "^1.6.5"
   }
