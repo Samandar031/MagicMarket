@@ -4,6 +4,14 @@ html{
   font-size: 62.5%;
 }
 
+:root{
+  --toqKok: #52aabc;
+  --kok: #97d8ed;
+  --och: #f0e593;
+  --ortacha: #f8bc43;
+  --jigarrang: #a6620a;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -19,18 +27,28 @@ html{
 .navbar {
   width: 100%;
   height: 5rem;
-  background-color: white;
-  box-shadow: 0 0 0.5rem gray;
+  background-color: var(--kok);
+  // box-shadow: 0 0 0.5rem gray;
+  position: fixed;
+  top:0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
   font-size: 2rem;
+  color: white;
  
   .nav_right{
     display: flex;
     justify-items: center;
     align-items: center;
+    font-size: 1.6rem;
     gap: 2rem;
+    .nav_sign{
+      background-color: white;
+      color: var(--kok);
+      border-radius: 0.4rem;
+      padding: 0.4rem 0.8rem;
+    }
   }
 }

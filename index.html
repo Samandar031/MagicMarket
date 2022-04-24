@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./src/scss/main.scss">
-  <link rel="stylesheet" href="./src/icons-1.8.1/bootstrap-icons.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
@@ -18,7 +18,11 @@
         .brand
       </div>
       <div class="nav_right">
-        <div class="nav_basket"></div>
+        <div class="nav_basket">
+          <i class="bi bi-cart3"></i>
+          <span nav_number>3</span>
+        </div>
+        <div class="nav_lang"><i class="bi bi-globe"></i> En</div>
         <div class="nav_sign">Sign in</div>
       </div>
     </section>
@@ -148,6 +152,8 @@
     </section>
 
     <section class="register">
+      <div class="register_close"><i class="bi bi-x-square"></i></div>
+
       <div class="register_cards">
         <div class="register_login">
           <input type="text" id="username"class="username"placeholder="username"><br>
