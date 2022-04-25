@@ -152,11 +152,11 @@ html {
 
 .popup .popup_cards {
   margin-top: 15rem;
-  border: 1px solid var(--ortacha);
+  
   border-left: 1rem solid var(--kok);
   width: 80%;
   height: 85%;
-  background-color: #fff;
+  box-shadow: 0 0 1rem rgba(128, 128, 128, 0.537);
   grid-template-columns: 1fr 1fr 1fr;
   margin: 2rem auto;
   padding: 2rem;
@@ -175,6 +175,7 @@ html {
   top: 9rem;
   right: 18rem;
   font-size: 3rem;
+  color: var(--toqKok);
 }
 
 .popup .popup_cards .popup_basic_card {
@@ -185,10 +186,11 @@ html {
   display: flex;
 }
 
-.popup .popup_cards .popup_basic_card img {
-  width: 20rem;
-  height: 35rem;
-  border: 2px solid red;
+.popup .popup_cards .popup_basic_card .card_emoji {
+
+  font-size: 6rem;
+  margin: 8rem;
+ 
 }
 
 .popup .popup_cards .popup_basic_card .popup_basic_content {
@@ -199,12 +201,12 @@ html {
 .popup .popup_cards .popup_basic_card .popup_basic_content .popup_basic_title {
   text-align: center;
   margin: 1rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .popup .popup_cards .popup_basic_card .popup_basic_content .popup_basic_description {
-  font-size: 1.2rem;
-  line-height: 2rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 
 .popup .popup_cards .popup_basic_card .popup_basic_content .popup_basic_add {
@@ -215,6 +217,9 @@ html {
   margin: 5rem 0 0 65rem;
   padding: .5rem;
   font-size: 1.5rem;
+  position: absolute;
+  bottom: 20rem;
+  right: 20rem;
 }
 
 .popup .popup_cards .basic_card {
@@ -357,7 +362,7 @@ html {
         
 
         <div class="popup_basic_card">
-          <img src="{ImageProduct}" alt="">
+          <div class="card_emoji">{ImageProduct}</div>
           <div class="popup_basic_content">
             <div class="popup_basic_title">{NameProduct}</div>
             <div class="popup_basic_description">

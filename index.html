@@ -11,10 +11,10 @@
   href="https://fonts.googleapis.com/css?family=Megrim|Nunito+Sans:400,900"
   rel="stylesheet"
 />
-<link
+<!-- <link
   rel="icon"
   href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/155/ear-of-maize_1f33d.png"
-/>
+/> -->
   <style>
     @import "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap";
 html {
@@ -60,6 +60,7 @@ html {
   gap: 2rem;
   font-size: 1.6rem;
   display: flex;
+  cursor: pointer;
 }
 
 .navbar .nav_right .nav_sign {
@@ -67,6 +68,7 @@ html {
   background-color: #fff;
   border-radius: .4rem;
   padding: .4rem .8rem;
+  cursor: pointer;
 }
 
 html {
@@ -110,15 +112,27 @@ html {
 .basic_cards .basic_card {
   width: 25rem;
   height: 35rem;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   margin: 1rem auto;
   box-shadow: 0 0 .5rem gray;
 }
 
-.basic_cards .basic_card img {
-  width: 100%;
-  height: 50%;
-  margin-bottom: 3rem;
+.basic_cards .basic_card:hover{
+ 
+  transition: 1s;
+  background-color: var(--kok);
+  color: #112A46;
+  
+  box-shadow: none;
+  font-weight: 550;
+}
+
+
+
+.basic_cards .basic_card .card_emoji {
+  text-align: center;
+  margin: 6rem auto;
+  font-size: 6rem;
 }
 
 .basic_cards .basic_card .card_description, .basic_cards .basic_card .card_footer {
@@ -131,12 +145,14 @@ html {
 
 .basic_cards .basic_card .card_plus {
   font-size: 3rem;
+  cursor: pointer;
 }
 
 .basic_cards .basic_card .card_btn {
   border: 1px solid var(--toqKok);
   border-radius: 2rem;
   padding: .8rem;
+  color: var(--toqKok);
 }
 
 .popup {

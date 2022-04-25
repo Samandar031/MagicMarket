@@ -75,7 +75,6 @@ let popup = fs.readFileSync("./templates/popup.html", "utf-8");
 
 const dataD = fs.readFileSync("./dev-data/data.json", "utf-8");
 const dataObj = JSON.parse(dataD);
-// console.log(dataObj);
 
 const server = http.createServer((req, res) => {
   const changeCard = dataObj
@@ -84,21 +83,24 @@ const server = http.createServer((req, res) => {
     })
     .join("");
 
-  let urlcha = req.url;
-  let query = +url.parse(urlcha, true).query.id;
+  let kelayotganUrl = req.url;
+  let query = +url.parse(kelayotganUrl, true).query.id;
 
   let output = html.replace("{cardHtml}", changeCard);
 
-  if (urlcha == "/overview") {
+  if (kelayotganUrl == "/overview") {
     res.writeHead(200, {
       "content-type": "text.html",
       "mening-headrim": "muvaffaqqiyatli ishlamoqda",
     });
     res.end(output);
-  } else if (urlcha == `/product?id=${query}`) {
+  } else if (kelayotganUrl == `/product?id=${query}`) {
     let objs = dataObj.find((val) => val.id == query);
 
+    let popupQoshilgan = popup.replace("{cardHtml}", changeCard);
+
     let popupHtml = replaceFunc(popup, objs);
+
     res.writeHead(200, {
       "content-type": "text/html",
     });
