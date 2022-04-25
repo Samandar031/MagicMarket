@@ -34,17 +34,17 @@ login.addEventListener("click", function (e) {
 });
 
 // popup
-let popupBtn = document.querySelector(".card_btn");
-let popupCard = document.querySelector(".popup");
-let popupClose = document.querySelector(".popup_close");
+// let popupBtn = document.querySelector(".card_btn");
+// let popupCard = document.querySelector(".popup");
+// let popupClose = document.querySelector(".popup_close");
 
-popupBtn.addEventListener("click", function () {
-  popupCard.style.display = "block";
-});
+// popupBtn.addEventListener("click", function () {
+//   popupCard.style.display = "block";
+// });
 
-popupClose.addEventListener("click", function () {
-  popupCard.style.display = "none";
-});
+// popupClose.addEventListener("click", function () {
+//   popupCard.style.display = "none";
+// });
 
 // register
 

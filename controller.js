@@ -4,6 +4,9 @@ const http = require("http");
 const url = require("url");
 const replaceFunc = require("./module/replaceFunc.js");
 
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+
 // let login = document.querySelector(".login_btn_l");
 // let create = document.querySelector(".sign_btn_s");
 
@@ -97,14 +100,32 @@ const server = http.createServer((req, res) => {
   } else if (kelayotganUrl == `/product?id=${query}`) {
     let objs = dataObj.find((val) => val.id == query);
 
-    let popupQoshilgan = popup.replace("{cardHtml}", changeCard);
+    let category = objs.category;
+
+    let arr = [];
+    let rekomendatsiya = dataObj.forEach((el) => {
+      if (el.category == category) {
+        arr.push(el);
+      }
+    });
+
+    let topish = arr.findIndex((val) => {
+      return val.id == query;
+    });
+    arr.splice(topish, 1);
+    let popupQoshilgan = arr
+      .map((val) => {
+        return replaceFunc(cardHtml, val);
+      })
+      .join("");
 
     let popupHtml = replaceFunc(popup, objs);
+    const oxiri = popupHtml.replace("{cardHtml}", popupQoshilgan);
 
     res.writeHead(200, {
       "content-type": "text/html",
     });
-    res.end(popupHtml);
+    res.end(oxiri);
   }
 });
 server.listen("8001", "127.0.0.1");
